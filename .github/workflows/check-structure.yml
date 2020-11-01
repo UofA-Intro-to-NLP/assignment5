@@ -13,6 +13,8 @@ jobs:
         run: |
           test -f output/output_dev.csv
           test -f output/output_test.csv
+          [[ $(wc -l < output/output_dev.csv) -eq 409 ]]
+          [[ $(wc -l < output/output_test.csv) -eq 410 ]]
       - name: Check report
         run: |
           test -f report.pdf
