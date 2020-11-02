@@ -11,9 +11,9 @@ jobs:
         run: test -f README.md 
       - name: Check output files
         run: |
-          test -f output/output_dev.csv
+          test -f output/output_eval.csv
           test -f output/output_test.csv
-          [[ $(wc -l < output/output_dev.csv) -eq 408 ]]
+          [[ $(wc -l < output/output_eval.csv) -eq 408 ]]
           [[ $(wc -l < output/output_test.csv) -eq 409 ]]
       - name: Check report
         run: |
